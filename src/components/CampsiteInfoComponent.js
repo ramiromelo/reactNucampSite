@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class CampsiteInfo extends Component {
     constructor(props) {
@@ -47,14 +47,13 @@ class CampsiteInfo extends Component {
         console.log('Render CampsiteInfo')
         if (campsite){
             return ( 
-
-                <div className="row">
-                    {console.log('campsite is truthy')}
-                    {this.renderCampsite(this.props.campsite)}
-                   {this.renderComments(this.props.campsite.comments)}
+                <div className="container">
+                    <div className="row">
+                        {this.renderCampsite(this.props.campsite)}
+                        {this.renderComments(this.props.campsite.comments)}
+                    </div>
                 </div>
-
-                );  
+            );  
         }
 
         return (
