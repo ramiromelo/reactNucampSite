@@ -20,11 +20,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">NuCamp</NavbarBrand>
-          </div>
-        </Navbar>
+        
         <Directory
           campsites={this.state.campsites}
           onClick={(campsiteId) => this.onCampsiteSelect(campsiteId)}
